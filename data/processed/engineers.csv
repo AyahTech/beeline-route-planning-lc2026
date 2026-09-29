@@ -1,0 +1,35 @@
+id,name,home_district,start_lat,start_lon,shift_start,shift_end,skills,vehicle_type
+ENG-01,Бахарев Андрей,Котловка,55.673032,37.590955,480,1440,connection|local,car
+ENG-02,Бригада Андреев,Орехово Борисово Южное,55.598528,37.712564,480,1440,connection|local,car
+ENG-03,Бригада Арташкин,Кузьминки,55.707941,37.780027,480,1200,connection|local,car
+ENG-04,Бригада Белоновский,Зябликово,55.613536,37.607247,480,1440,connection|local,car
+ENG-05,Бригада Белузин,Выхино,55.71094,37.820209,480,1440,connection|local,car
+ENG-06,Бригада Бузань,Бирюлево Восточное,55.602234,37.655698,480,1320,connection|local,car
+ENG-07,Бригада Горбанев,Царицыно,55.623241,37.675597,0,1440,connection|emergency|local,car
+ENG-08,Бригада Гусаковский,Таганский,55.742736,37.655857,480,1320,connection|local,public transport
+ENG-09,Бригада Демин,Бирюлево Западное,55.603201,37.651936,600,960,local,public transport
+ENG-10,Бригада Зверев,Таганский,55.737736,37.662129,480,1080,connection|local,bicycle
+ENG-11,Бригада Каушнян,Южнопортовый,55.69416,37.685092,480,1440,connection|emergency|local,public transport
+ENG-12,Бригада Козырь,Кашира,54.834814,38.167763,0,1440,connection|emergency|local,car
+ENG-13,Бригада Комарь,Рязанский,55.723613,37.774731,480,1320,connection|local,bicycle
+ENG-14,Бригада Макаров,Братеево,55.631867,37.771597,480,1320,connection|local,car
+ENG-15,Бригада Матвеев,Рязанский,55.717984,37.781765,480,1440,connection|local,public transport
+ENG-16,Бригада Мельников,Текстильщики,55.709684,37.742777,480,1320,connection|local,car
+ENG-17,Бригада Паршин,Домодедово,55.41298,37.565747,480,1440,connection|emergency|local,car
+ENG-18,Бригада Перов,Лефортово,55.76649,37.679888,480,1080,connection|local,car
+ENG-19,Бригада Попов,Нижегородский,55.732327,37.727372,480,1440,connection|local,public transport
+ENG-20,Бригада Рыбин,Орехово Борисово Северное,55.605719,37.699766,480,1200,connection|local,car
+ENG-21,Бригада Саламатин,Кашира,54.838868,38.166083,0,1080,connection|emergency|local,car
+ENG-22,Бригада Свеженцев,Басманный,55.773377,37.656775,480,1440,emergency|local,public transport
+ENG-23,Бригада Соколов,Таганский,55.736755,37.65263,480,1320,connection|local,pedestrian
+ENG-24,Бригада Царьков,Царицыно,55.619405,37.660125,840,1200,connection|local,car
+ENG-25,Брюзгин Ярослав,Академический,55.684203,37.571084,480,1440,connection|local,car
+ENG-26,Выговский Сергей,Академический,55.682002,37.569529,720,1320,connection|local,car
+ENG-27,Данилов Даниил,Хамовники,55.755535,37.59205,480,1200,connection|local,public transport
+ENG-28,Ионов Геннадий,Нагатинский Затон,55.688254,37.702046,480,1440,connection|local,car
+ENG-29,Исхаков Денис,Даниловский,55.706802,37.648426,480,1320,connection|local,bicycle
+ENG-30,Капитанчук Александр,Даниловский,55.713875,37.655859,480,1320,connection|local,pedestrian
+ENG-31,Переладов Алексей,Зюзино,55.66852,37.574316,600,1440,connection|local,car
+ENG-32,Прокопенко Вячеслав,Нагорный,55.667668,37.607302,480,1320,connection|local,bicycle
+ENG-33,Рыбалкин Егор,Нагатинский Затон,55.681915,37.710032,480,1440,connection|local,car
+ENG-34,Сакур Тимофей,Нагатинский Затон,55.672579,37.700258,480,1200,connection|local,car
