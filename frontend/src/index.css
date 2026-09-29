@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background-color: #0b1024; }
+  body {
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    /* Paint the page backdrop on <body> so collapsed margins and overscroll
+       rubber-banding never expose the browser's default white canvas. */
+    background:
+      radial-gradient(900px 620px at 12% 6%, rgba(99, 102, 241, 0.5), transparent 55%),
+      radial-gradient(1000px 720px at 90% 10%, rgba(217, 70, 239, 0.35), transparent 60%),
+      radial-gradient(820px 620px at 80% 90%, rgba(20, 184, 166, 0.42), transparent 55%),
+      radial-gradient(760px 560px at 4% 88%, rgba(59, 130, 246, 0.38), transparent 60%),
+      radial-gradient(560px 420px at 52% 48%, rgba(255, 200, 0, 0.14), transparent 65%),
+      linear-gradient(165deg, #0b1024 0%, #12183b 55%, #191040 100%);
+  }
+}
+
+@layer components {
+  /* Frosted-glass surface, dark tint.
+     Spec: blur(15px) / 1px border with gradient stroke. Fill is near-opaque
+     dark navy (avg alpha ~0.85) so panels stay readable over any content. */
+  .glass {
+    border: 1px solid transparent;
+    background:
+      linear-gradient(135deg, rgba(17, 23, 54, 0.90) 0%, rgba(12, 17, 42, 0.82) 45%, rgba(16, 22, 51, 0.87) 100%) padding-box,
+      linear-gradient(160deg, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0.14) 38%, rgba(255, 255, 255, 0.07) 62%, rgba(255, 255, 255, 0.30) 100%) border-box;
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.15),
+      0 8px 32px rgba(5, 10, 30, 0.4);
+  }
+  .glass-input {
+    background: rgba(10, 15, 38, 0.78);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+  }
+  .glass-input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2);
+  }
+  .glass-input option { color: #0f172a; }
+  .glass-btn {
+    background: rgba(255, 255, 255, 0.07);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.28);
+    color: #fff;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    transition: background 0.15s ease, border-color 0.15s ease;
+  }
+  .glass-btn:hover:not(:disabled) {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.45);
+  }
+}
+
+/* Leaflet: standard OSM tiles, darkened client-side (no keyed tile vendor).
+   invert + hue-rotate(185deg) flips light tiles to dark while keeping hues. */
+.leaflet-tile-pane {
+  filter: invert(1) hue-rotate(185deg) brightness(0.82) contrast(0.92) saturate(0.45);
+}
+.leaflet-container { height: 100%; width: 100%; background: #0b1024; }
+.leaflet-bar {
+  border: 1px solid rgba(255, 255, 255, 0.35) !important;
+  box-shadow: 0 8px 32px rgba(5, 10, 30, 0.35) !important;
+  overflow: hidden;
+  border-radius: 0.65rem;
+}
+.leaflet-bar a {
+  background: rgba(20, 27, 58, 0.9) !important;
+  color: #fff !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3) !important;
+}
+.leaflet-tooltip {
+  background: rgba(13, 18, 43, 0.92);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+.leaflet-tooltip-top:before { border-top-color: rgba(13, 18, 43, 0.92); }
+.leaflet-tooltip-bottom:before { border-bottom-color: rgba(13, 18, 43, 0.92); }
+.leaflet-tooltip-left:before { border-left-color: rgba(13, 18, 43, 0.92); }
+.leaflet-tooltip-right:before { border-right-color: rgba(13, 18, 43, 0.92); }
+.leaflet-control-attribution {
+  background: rgba(13, 18, 43, 0.85) !important;
+  color: rgba(255, 255, 255, 0.55) !important;
+}
+.leaflet-control-attribution a { color: rgba(255, 255, 255, 0.75) !important; }
+
+/* Accessibility: honour reduced-transparency by swapping glass for solid panels */
+@media (prefers-reduced-transparency: reduce) {
+  .glass, .glass-btn, .glass-input {
+    background: rgba(20, 27, 58, 0.98);
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+}
