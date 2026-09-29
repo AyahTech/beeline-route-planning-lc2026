@@ -1,6 +1,7 @@
 # Beeline Route Planning — Field Service Dispatch Prototype
 <img width="4320" height="2430" alt="Image" src="https://github.com/user-attachments/assets/7d10425a-7600-4735-92bc-8b3a919f9898" />
 
+
 Full stack: FastAPI + OR-Tools (VRPTW) backend, React + Leaflet frontend, and processed data from three regions (205 service requests, 34 engineers). Case: “Control Allocation.”
 
 ## Quick Start
@@ -13,6 +14,8 @@ Or run locally (two terminals):
     cd frontend && npm install && npm run dev        # proxy /api -> :8000
 
 ## Demo Scenario (5–7 minutes)
+<img width="1464" height="698" alt="Image" src="https://github.com/user-attachments/assets/4a61c09d-6072-4291-abe4-00461b866895" />
+
 
 1. Load the dataset (all regions / one region).
 2. Click “Run Planning” → assignments appear on the map.
@@ -20,6 +23,9 @@ Or run locally (two terminals):
 4. Click a point → an explanation of why this engineer was assigned and which constraints applied.
 5. Replanning: ⚡ urgent request / ✕ cancellation / 🚫 engineer unavailable → changes are highlighted.
 6. “Comparison with Baseline” tab — the two required metrics are shown side by side.
+
+<img width="1467" height="804" alt="Image" src="https://github.com/user-attachments/assets/e11a1bba-1cfb-4354-9ef2-36511847e5fb" />
+
 
 ## Three Groups of Constraints (Implemented in `app/constraints.py`)
 
