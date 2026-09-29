@@ -1,4 +1,5 @@
 # Beeline Route Planning — Field Service Dispatch Prototype
+<img width="4320" height="2430" alt="Image" src="https://github.com/user-attachments/assets/7d10425a-7600-4735-92bc-8b3a919f9898" />
 
 Full stack: FastAPI + OR-Tools (VRPTW) backend, React + Leaflet frontend, and processed data from three regions (205 service requests, 34 engineers). Case: “Control Allocation.”
 
