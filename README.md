@@ -56,9 +56,3 @@ Or run locally (two terminals):
     backend/data/         processed (tickets/engineers/depots/coords) + raw (6 original CSV files)
     frontend/src/         React SPA: map, KPIs, tables, replanning, comparison
     scripts/build_data.py reproducible pipeline from raw -> processed
-
-## Структура
-    backend/app/        solver (OR-Tools + жадный fallback), baseline, metrics, explain, replan
-    backend/data/       processed (tickets/engineers/depots/coords) + raw (6 исходных CSV)
-    frontend/src/       React SPA: карта, KPI, таблицы, перепланирование, сравнение
-    scripts/build_data.py  воспроизводимый пайплайн raw -> processed
